@@ -1,0 +1,16 @@
+flowchart TD
+    A[main.py<br/>命令行入口] --> B[data/loader.py<br/>读取与字段校验]
+    B --> C[data/cleaner.py<br/>日期/数值规范化]
+    C --> D[analysis/metrics.py<br/>城市与日期指标]
+    D --> E[visualization/charts.py<br/>趋势图/城市对比图]
+    F[config.py<br/>默认路径] --> A
+    E --> G[reports/figures<br/>PNG 图表]
+    H[data/raw/air_quality_sample.csv] --> B
+    I[tests/test_pipeline.py] -.验证.-> B
+    I -.验证.-> C
+    I -.验证.-> D
+
+    classDef module fill:#e0f2fe,stroke:#0284c7,color:#0c4a6e;
+    classDef io fill:#fef3c7,stroke:#d97706,color:#78350f;
+    class A,B,C,D,E,F,I module;
+    class G,H io;

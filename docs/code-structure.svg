@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="650" viewBox="0 0 1100 650" role="img" aria-labelledby="title desc">
+  <title id="title">城市空气质量数据分析与可视化代码结构图</title>
+  <desc id="desc">输入 CSV 经由数据读取、清洗、指标分析和图表生成，最终输出 PNG 图表；主入口由配置提供默认路径，测试模块验证核心流程。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L10,3 L0,6 Z" fill="#64748b"/></marker>
+    <style>
+      .box{rx:14;stroke-width:2}.module{fill:#e0f2fe;stroke:#0284c7}.io{fill:#fef3c7;stroke:#d97706}.test{fill:#dcfce7;stroke:#16a34a}
+      .title{font:700 18px sans-serif;fill:#0f172a}.label{font:600 15px sans-serif;fill:#0c4a6e}.small{font:13px sans-serif;fill:#475569}.line{stroke:#64748b;stroke-width:2;fill:none;marker-end:url(#arrow)}.dashed{stroke-dasharray:7 6}
+    </style>
+  </defs>
+  <rect width="1100" height="650" fill="#ffffff"/>
+  <text x="550" y="42" text-anchor="middle" class="title">城市空气质量数据分析与可视化 · 代码结构</text>
+  <rect x="55" y="100" width="220" height="90" class="box io"/><text x="165" y="135" text-anchor="middle" class="label">data/raw</text><text x="165" y="160" text-anchor="middle" class="small">air_quality_sample.csv</text>
+  <rect x="330" y="100" width="220" height="90" class="box module"/><text x="440" y="135" text-anchor="middle" class="label">data/loader.py</text><text x="440" y="160" text-anchor="middle" class="small">读取 · 字段校验</text>
+  <rect x="605" y="100" width="220" height="90" class="box module"/><text x="715" y="135" text-anchor="middle" class="label">data/cleaner.py</text><text x="715" y="160" text-anchor="middle" class="small">日期/数值规范化</text>
+  <path d="M275 145 H330" class="line"/><path d="M550 145 H605" class="line"/>
+  <rect x="330" y="285" width="220" height="90" class="box module"/><text x="440" y="320" text-anchor="middle" class="label">analysis/metrics.py</text><text x="440" y="345" text-anchor="middle" class="small">城市/日期指标</text>
+  <rect x="605" y="285" width="220" height="90" class="box module"/><text x="715" y="320" text-anchor="middle" class="label">visualization/charts.py</text><text x="715" y="345" text-anchor="middle" class="small">趋势图 · 城市对比图</text>
+  <path d="M715 190 V240 H440 V285" class="line"/><path d="M550 330 H605" class="line"/>
+  <rect x="880" y="285" width="165" height="90" class="box io"/><text x="962" y="320" text-anchor="middle" class="label">reports/figures</text><text x="962" y="345" text-anchor="middle" class="small">PNG 输出</text>
+  <path d="M825 330 H880" class="line"/>
+  <rect x="55" y="285" width="190" height="90" class="box module"/><text x="150" y="320" text-anchor="middle" class="label">config.py</text><text x="150" y="345" text-anchor="middle" class="small">默认路径配置</text>
+  <path d="M150 285 V230 H440 V190" class="line dashed"/>
+  <rect x="330" y="485" width="220" height="90" class="box module"/><text x="440" y="520" text-anchor="middle" class="label">main.py</text><text x="440" y="545" text-anchor="middle" class="small">CLI 编排入口</text>
+  <path d="M440 485 V375" class="line dashed"/><text x="455" y="430" class="small">调用流程</text>
+  <rect x="605" y="485" width="220" height="90" class="box test"/><text x="715" y="520" text-anchor="middle" class="label">tests/test_pipeline.py</text><text x="715" y="545" text-anchor="middle" class="small">加载 · 清洗 · 指标验证</text>
+  <path d="M605 530 H550 V330" class="line dashed"/>
+  <text x="55" y="620" class="small">实线：数据/执行流　虚线：配置、入口或测试关系</text>
+</svg>
