@@ -1,12 +1,12 @@
 flowchart TD
     A[main.py<br/>命令行入口] --> B[data/loader.py<br/>读取与字段校验]
-    B --> C[data/cleaner.py<br/>日期/数值规范化]
-    C --> D[analysis/metrics.py<br/>城市与日期指标]
-    D --> E[visualization/charts.py<br/>趋势图/城市对比图]
+    B --> C[data/cleaner.py<br/>时间规范化/时长计算]
+    C --> D[analysis/metrics.py<br/>时段与站点指标]
+    D --> E[visualization/charts.py<br/>趋势/用户/站点图]
     F[config.py<br/>默认路径] --> A
     E --> G[reports/figures<br/>PNG 图表]
-    H[data/raw/air_quality_sample.csv] --> B
-    I[tests/test_pipeline.py] -.验证.-> B
+    H[data/raw/bikeshare_sample.csv] --> B
+    I[tests/test_bikeshare.py] -.验证.-> B
     I -.验证.-> C
     I -.验证.-> D
 
