@@ -33,14 +33,14 @@ pytest
 └── tests/                       # 单元测试
 ```
 
-完整结构图见 [`docs/code-structure.svg`](docs/code-structure.svg) 和 [`docs/code-structure.mmd`](docs/code-structure.mmd)。完整实验报告见 [`docs/final-report.md`](docs/final-report.md)。
+完整结构图见 [`docs/code-structure.svg`](docs/code-structure.svg)、[`docs/code-structure.mmd`](docs/code-structure.mmd) 和 [`docs/code-structure.md`](docs/code-structure.md)。组员共同阅读手册见 [`docs/team-reading-guide.md`](docs/team-reading-guide.md)。完整实验报告见 [`docs/final-report.md`](docs/final-report.md)。
 
 ## 与大纲要求的对应
 
 - 目标 1：`docs/requirements.md`、`analysis/metrics.py` 体现需求分析与模块设计。
 - 目标 2：使用 pandas、NumPy、matplotlib 完成功能实现。
 - 目标 3/4：预留团队分工、代码评审和演示记录位置。
-- 目标 5：`docs/` 目录包含技术调研、方案设计、实验报告模板。
+- 目标 5：`docs/` 目录包含技术调研、方案设计、实验报告和答辩阅读手册。
 - 目标 6：`docs/tech-research.md` 记录数据分析工具与可视化技术调研。
 
 ## 后续可扩展
