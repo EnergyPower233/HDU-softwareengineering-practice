@@ -1,15 +1,15 @@
 from pathlib import Path
 
-from bikeshare_viz.analysis.metrics import station_summary
+from bikeshare_viz.analysis.metrics import hourly_summary
 from bikeshare_viz.data.cleaner import clean_bikeshare
 from bikeshare_viz.data.loader import load_bikeshare
 
 
-DATA = Path(__file__).parents[1] / "data/raw/bikeshare_sample.csv"
+DATA = Path(__file__).parents[1] / "data/raw/uci-bike-sharing/hour.csv"
 
 
-def test_load_and_clean_pipeline():
+def test_uci_dataset_pipeline():
     frame = clean_bikeshare(load_bikeshare(DATA))
-    assert len(frame) == 12
-    assert (frame["duration_min"] > 0).all()
-    assert station_summary(frame).iloc[0]["start_station"] == "西湖东门"
+    assert len(frame) == 17379
+    assert frame["cnt"].sum() > 0
+    assert len(hourly_summary(frame)) == 24

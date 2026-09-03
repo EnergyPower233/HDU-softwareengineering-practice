@@ -1,11 +1,11 @@
 flowchart TD
     A[main.py<br/>命令行入口] --> B[data/loader.py<br/>读取与字段校验]
-    B --> C[data/cleaner.py<br/>时间规范化/时长计算]
-    C --> D[analysis/metrics.py<br/>时段与站点指标]
-    D --> E[visualization/charts.py<br/>趋势/用户/站点图]
+    B --> C[data/cleaner.py<br/>日期/数值规范化]
+    C --> D[analysis/metrics.py<br/>时段与天气指标]
+    D --> E[visualization/charts.py<br/>小时/用户/天气图]
     F[config.py<br/>默认路径] --> A
     E --> G[reports/figures<br/>PNG 图表]
-    H[data/raw/bikeshare_sample.csv] --> B
+    H[data/raw/uci-bike-sharing/hour.csv] --> B
     I[tests/test_bikeshare.py] -.验证.-> B
     I -.验证.-> C
     I -.验证.-> D

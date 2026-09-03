@@ -9,13 +9,13 @@
     </style>
   </defs>
   <rect width="1100" height="650" fill="#ffffff"/>
-  <text x="550" y="42" text-anchor="middle" class="title">城市共享单车出行分析与可视化 · 代码结构</text>
-  <rect x="55" y="100" width="220" height="90" class="box io"/><text x="165" y="135" text-anchor="middle" class="label">data/raw</text><text x="165" y="160" text-anchor="middle" class="small">bikeshare_sample.csv</text>
+  <text x="550" y="42" text-anchor="middle" class="title">UCI 共享单车租赁分析与可视化 · 代码结构</text>
+  <rect x="55" y="100" width="220" height="90" class="box io"/><text x="165" y="135" text-anchor="middle" class="label">data/raw</text><text x="165" y="160" text-anchor="middle" class="small">uci-bike-sharing/hour.csv</text>
   <rect x="330" y="100" width="220" height="90" class="box module"/><text x="440" y="135" text-anchor="middle" class="label">data/loader.py</text><text x="440" y="160" text-anchor="middle" class="small">读取 · 字段校验</text>
-  <rect x="605" y="100" width="220" height="90" class="box module"/><text x="715" y="135" text-anchor="middle" class="label">data/cleaner.py</text><text x="715" y="160" text-anchor="middle" class="small">时间规范化/时长计算</text>
+  <rect x="605" y="100" width="220" height="90" class="box module"/><text x="715" y="135" text-anchor="middle" class="label">data/cleaner.py</text><text x="715" y="160" text-anchor="middle" class="small">日期/数值规范化</text>
   <path d="M275 145 H330" class="line"/><path d="M550 145 H605" class="line"/>
-  <rect x="330" y="285" width="220" height="90" class="box module"/><text x="440" y="320" text-anchor="middle" class="label">analysis/metrics.py</text><text x="440" y="345" text-anchor="middle" class="small">时段/站点指标</text>
-  <rect x="605" y="285" width="220" height="90" class="box module"/><text x="715" y="320" text-anchor="middle" class="label">visualization/charts.py</text><text x="715" y="345" text-anchor="middle" class="small">时段/用户/站点图</text>
+  <rect x="330" y="285" width="220" height="90" class="box module"/><text x="440" y="320" text-anchor="middle" class="label">analysis/metrics.py</text><text x="440" y="345" text-anchor="middle" class="small">时段/天气指标</text>
+  <rect x="605" y="285" width="220" height="90" class="box module"/><text x="715" y="320" text-anchor="middle" class="label">visualization/charts.py</text><text x="715" y="345" text-anchor="middle" class="small">小时/用户/天气图</text>
   <path d="M715 190 V240 H440 V285" class="line"/><path d="M550 330 H605" class="line"/>
   <rect x="880" y="285" width="165" height="90" class="box io"/><text x="962" y="320" text-anchor="middle" class="label">reports/figures</text><text x="962" y="345" text-anchor="middle" class="small">PNG 输出</text>
   <path d="M825 330 H880" class="line"/>

@@ -8,17 +8,17 @@
 python -m venv .venv
 source .venv/bin/activate        # Windows: .venv\\Scripts\\activate
 pip install -e ".[dev]"
-python -m bikeshare_viz.main --input data/raw/bikeshare_sample.csv --output reports/figures
+python -m bikeshare_viz.main
 pytest
 ```
 
-运行后会在 `reports/figures/` 生成骑行时段、用户类型和热门站点图。
+运行后会在 `reports/figures/` 生成小时租车量、用户类型和天气影响图。
 
 ## 项目结构
 
 ```text
 .
-├── data/raw/                    # 原始数据（示例数据已提供）
+├── data/raw/                    # UCI 真实数据
 ├── data/processed/              # 清洗后的中间数据
 ├── docs/                        # 需求、方案、调研与实验报告
 ├── notebooks/                   # 探索性分析 Notebook
@@ -33,7 +33,7 @@ pytest
 └── tests/                       # 单元测试
 ```
 
-完整结构图见 [`docs/code-structure.mmd`](docs/code-structure.mmd)。
+完整结构图见 [`docs/code-structure.svg`](docs/code-structure.svg) 和 [`docs/code-structure.mmd`](docs/code-structure.mmd)。完整实验报告见 [`docs/final-report.md`](docs/final-report.md)。
 
 ## 与大纲要求的对应
 
@@ -45,4 +45,4 @@ pytest
 
 ## 后续可扩展
 
-可接入真实公开数据源、增加 Streamlit 页面、加入异常检测/预测模型，并补充数据库或缓存层。当前 Skeleton 刻意保持离线可运行，便于课程验收与复现。
+当前项目已接入 UCI Bike Sharing 真实数据集；后续可增加 Streamlit 页面、需求预测、天气影响建模和交互式地图。项目保留离线运行方式，便于课程验收与复现。

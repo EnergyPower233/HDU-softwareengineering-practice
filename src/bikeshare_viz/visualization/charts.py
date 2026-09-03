@@ -7,11 +7,11 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import pandas as pd
 
-from bikeshare_viz.analysis.metrics import hourly_summary, station_summary
+from bikeshare_viz.analysis.metrics import hourly_summary, weather_summary
 
 
 def create_charts(frame: pd.DataFrame, output_dir: str | Path) -> list[Path]:
-    """生成时段、用户类型和热门站点图。"""
+    """生成小时、用户类型、天气影响三张图。"""
     output = Path(output_dir)
     output.mkdir(parents=True, exist_ok=True)
     plt.style.use("ggplot")
@@ -19,30 +19,32 @@ def create_charts(frame: pd.DataFrame, output_dir: str | Path) -> list[Path]:
 
     hourly = hourly_summary(frame)
     fig, ax = plt.subplots(figsize=(8, 4.5))
-    ax.plot(hourly["hour"], hourly["rides"], marker="o", color="#2563eb")
-    ax.set(title="Rides by Start Hour", xlabel="Hour", ylabel="Rides")
+    ax.plot(hourly["hr"], hourly["rides"], marker="o", color="#2563eb")
+    ax.set(title="Average Bike Rentals by Hour", xlabel="Hour", ylabel="Average Rentals")
     fig.tight_layout()
-    path = output / "rides_by_hour.png"
+    path = output / "rentals_by_hour.png"
     fig.savefig(path, dpi=160)
     plt.close(fig)
     paths.append(path)
 
-    users = frame.groupby("user_type").size().sort_values(ascending=False)
+    users = frame[["casual", "registered"]].mean()
     fig, ax = plt.subplots(figsize=(8, 4.5))
-    ax.bar(users.index, users.values, color=["#1d4ed8", "#93c5fd"][: len(users)])
-    ax.set(title="Rides by User Type", xlabel="User Type", ylabel="Rides")
+    ax.bar(["Casual users", "Registered users"], users.values, color=["#60a5fa", "#1d4ed8"])
+    ax.set(title="Average Rentals by User Type", xlabel="User Type", ylabel="Average Rentals")
     fig.tight_layout()
-    path = output / "rides_by_user_type.png"
+    path = output / "rentals_by_user_type.png"
     fig.savefig(path, dpi=160)
     plt.close(fig)
     paths.append(path)
 
-    stations = station_summary(frame).head(5).sort_values("rides")
+    weather = weather_summary(frame)
     fig, ax = plt.subplots(figsize=(8, 4.5))
-    ax.barh(stations["start_station"], stations["rides"], color="#3b82f6")
-    ax.set(title="Top 5 Start Stations", xlabel="Rides", ylabel="Station")
+    labels = ["Clear", "Mist", "Light rain/snow", "Heavy rain/snow"]
+    ax.bar(weather["weathersit"].astype(str), weather["rides"], color="#0ea5e9")
+    ax.set(title="Average Rentals by Weather", xlabel="Weather Code", ylabel="Average Rentals")
+    ax.set_xticks(weather["weathersit"], [labels[int(v) - 1] for v in weather["weathersit"]])
     fig.tight_layout()
-    path = output / "top_start_stations.png"
+    path = output / "rentals_by_weather.png"
     fig.savefig(path, dpi=160)
     plt.close(fig)
     paths.append(path)
