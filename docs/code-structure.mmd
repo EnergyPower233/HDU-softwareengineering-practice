@@ -1,16 +1,34 @@
-flowchart TD
-    A[main.py<br/>命令行入口] --> B[data/loader.py<br/>读取与字段校验]
-    B --> C[data/cleaner.py<br/>日期/数值规范化]
-    C --> D[analysis/metrics.py<br/>时段与天气指标]
-    D --> E[visualization/charts.py<br/>小时/用户/天气图]
-    F[config.py<br/>默认路径] --> A
-    E --> G[reports/figures<br/>PNG 图表]
-    H[data/raw/uci-bike-sharing/hour.csv] --> B
-    I[tests/test_bikeshare.py] -.验证.-> B
-    I -.验证.-> C
-    I -.验证.-> D
+flowchart LR
+    A1[UCI hour.csv<br/>原始小时数据] --> B[数据分析模块]
+    A2[Kaggle bike_data.csv<br/>大屏与数据库数据] --> C[数据库模块]
 
+    subgraph B[Python 数据分析模块]
+        B1[loader.py<br/>字段校验] --> B2[cleaner.py<br/>类型转换与清洗]
+        B2 --> B3[metrics.py<br/>小时/天气指标]
+        B3 --> B4[charts.py<br/>静态图表]
+        B5[main.py<br/>命令行编排] --> B1
+        B4 --> B6[reports/figures<br/>PNG 图表]
+    end
+
+    subgraph C[数据库与查询接口]
+        C1[init_db.py<br/>建表/导入/索引] --> C2[(bike_sharing.db<br/>bike_usage 表)]
+        C2 --> C3[db_helper.py<br/>KPI/天气/小时查询]
+        C3 --> C4[api.py<br/>JSON API]
+    end
+
+    subgraph D[前端数据大屏]
+        D1[process_data.py<br/>生成前端数据] --> D2[data.json]
+        D2 --> D3[index.html<br/>ECharts Dashboard]
+        C4 -. 可扩展接口 .-> D3
+    end
+
+    A2 --> D1
+    E[tests/<br/>分析与数据库测试] -. 验证 .-> B
+    E -. 验证 .-> C
+
+    classDef data fill:#fef3c7,stroke:#d97706,color:#78350f;
     classDef module fill:#e0f2fe,stroke:#0284c7,color:#0c4a6e;
-    classDef io fill:#fef3c7,stroke:#d97706,color:#78350f;
-    class A,B,C,D,E,F,I module;
-    class G,H io;
+    classDef output fill:#dcfce7,stroke:#16a34a,color:#14532d;
+    class A1,A2 data;
+    class B1,B2,B3,B4,B5,C1,C3,C4,D1,D3,E module;
+    class B6,C2,D2 output;

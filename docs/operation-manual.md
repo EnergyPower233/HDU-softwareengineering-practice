@@ -30,6 +30,45 @@ PYTHONPATH=src python3 -m bikeshare_viz.main \
 PYTHONPATH=src python3 -m pytest -q
 ```
 
+## 数据库与查询接口
+
+创建 SQLite 数据库并导入 Kaggle 整理数据：
+
+```bash
+PYTHONPATH=src python3 -m bikeshare_viz.database.init_db
+```
+
+运行 KPI 与天气查询接口测试：
+
+```bash
+PYTHONPATH=src python3 -m bikeshare_viz.database.db_helper
+```
+
+启动本地 JSON API：
+
+```bash
+PYTHONPATH=src python3 -m bikeshare_viz.database.api
+```
+
+浏览器访问 `http://127.0.0.1:8000/api/kpi`、`/api/weather` 或 `/api/hourly` 查看返回数据。
+
+## 前端数据大屏
+
+重新生成大屏数据：
+
+```bash
+python3 web/dashboard/process_data.py
+```
+
+进入 `web/dashboard/` 后启动本地静态服务器，再访问浏览器：
+
+```bash
+cd web/dashboard
+python3 -m http.server 8080
+```
+
+打开 `http://127.0.0.1:8080`。不能直接双击 `index.html`，否则浏览器可能阻止 `fetch('data.json')` 读取本地 JSON。
+
 ## 提交清单
 
 - [ ] `src/` 源代码

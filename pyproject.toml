@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "bikeshare-viz"
 version = "0.1.0"
-description = "城市共享单车出行数据分析与可视化课程项目 Skeleton"
+description = "城市共享单车需求分析、SQLite 查询接口与可视化大屏课程项目"
 requires-python = ">=3.10"
 dependencies = [
   "numpy>=1.24",

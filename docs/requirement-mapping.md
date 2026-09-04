@@ -6,7 +6,7 @@
 | --- | --- |
 | 需求分析与系统设计 | `requirements.md` 明确用户、场景、功能和非功能需求；`system-design.md` 说明模块、接口和异常处理。 |
 | Python 实现与第三方库 | `pyproject.toml` 配置 Python、pandas、NumPy、matplotlib 和 pytest；`src/` 给出完整实现。 |
-| 团队合作 | `team-plan.md` 将五人分为项目管理、数据工程、分析、可视化、测试文档五个角色，并列出每项成果。 |
+| 团队合作 | `team-plan.md` 将五人分为后端数据库、数据分析、前端大屏、文档质量、调研答辩五个角色，并列出每项成果。 |
 | 沟通与协作 | `team-plan.md` 规定共同需求评审、代码讲解、阶段汇报和最终答辩；`operation-manual.md` 统一复现步骤。 |
 | 技术与非技术文档 | `final-report.md`、`system-design.md`、`tech-research.md`、`operation-manual.md` 和 `README.md` 构成完整文档体系。 |
 | 前沿技术与持续学习 | `tech-research.md` 讨论 pandas、matplotlib、Streamlit、需求预测和数据集许可；报告中列出扩展路线。 |

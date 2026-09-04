@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>共享单车数据大屏</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js">
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #0a1628;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .card .value {
+            font-size: 34px;
+            font-weight: bold;
+            color: #00d4ff;
+        }
+        .card .label {
+            color: #8899bb;
+            font-size: 14px;
+            margin-top: 6px;
+        }
+        .full {
+            grid-column: span 2;
+            height: 280px;
+        }
+        .half {
+            height: 280px;
+        }
+        .title {
+            color: #fff;
+            font-size: 26px;
+            text-align: center;
+            padding: 15px 0 5px 0;
+            grid-column: span 4;
+            letter-spacing: 2px;
+        }
+        .loading {
+            color: #8899bb;
+            text-align: center;
+            grid-column: span 4;
+            padding: 80px 0;
+            font-size: 18px;
+        }
+        .error-msg {
+            grid-column: span 4;
+            color: #ff6b6b;
+            text-align: center;
+            padding: 60px 0;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dashboard" id="app">
+        <div class="title">🚲 共享单车租车数据分析大屏</div>
+        <div class="loading">⏳ 加载数据中...</div>
+    </div>
+
+    <script>
+        fetch('data.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('找不到 data.json，请确认文件在同目录下');
+                }
+                return response.json();
+            })
+            .then(data => {
+                renderDashboard(data);
+            })
+            .catch(error => {
+                document.getElementById('app').innerHTML = `
+                        <div class="title">🚲 共享单车租车数据分析大屏</div>
+                        <div class="error-msg">❌ ${error.message}</div>
+                    `;
+                console.error(error);
+            });
+
+        function renderDashboard(data) {
+            const app = document.getElementById('app');
+            app.innerHTML = `
+                    <div class="title">🚲 共享单车租车数据分析大屏</div>
+
+                    <div class="card"><div class="value">${data.total_count.toLocaleString()}</div><div class="label">总租车数</div></div>
+                    <div class="card"><div class="value">${data.avg_daily.toLocaleString()}</div><div class="label">日均租车</div></div>
+                    <div class="card"><div class="value">${data.max_daily.toLocaleString()}</div><div class="label">最高单日租车</div></div>
+                    <div class="card"><div class="value">${data.registered_ratio}%</div><div class="label">注册用户占比</div></div>
+
+                    <div class="card full" id="trendChart"></div>
+                    <div class="card half" id="hourlyChart"></div>
+                    <div class="card half" id="seasonChart"></div>
+                    <div class="card half" id="scatterChart"></div>
+                    <div class="card half" id="pieChart"></div>
+                `;
+
+            renderChart('trendChart', {
+                tooltip: { trigger: 'axis' },
+                grid: { top: 30, bottom: 30, left: 60, right: 20 },
+                xAxis: { type: 'category', data: data.trend.map(d => d.month), axisLabel: { color: '#8899bb' } },
+                yAxis: { type: 'value', axisLabel: { color: '#8899bb' } },
+                series: [{
+                    type: 'line',
+                    data: data.trend.map(d => d.count),
+                    smooth: true,
+                    lineStyle: { color: '#00d4ff', width: 3 },
+                    areaStyle: { color: 'rgba(0,212,255,0.2)' },
+                    itemStyle: { color: '#00d4ff' }
+                }]
+            });
+
+            renderChart('hourlyChart', {
+                tooltip: { trigger: 'axis' },
+                grid: { top: 30, bottom: 30, left: 50, right: 20 },
+                xAxis: { type: 'category', data: data.hourly.map(d => d.hour), axisLabel: { color: '#8899bb' } },
+                yAxis: { type: 'value', axisLabel: { color: '#8899bb' } },
+                series: [{ type: 'bar', data: data.hourly.map(d => d.count), itemStyle: { color: '#f5a623' } }]
+            });
+
+            renderChart('seasonChart', {
+                tooltip: { trigger: 'axis' },
+                grid: { top: 30, bottom: 30, left: 50, right: 20 },
+                xAxis: { type: 'category', data: data.seasonal.map(d => d.season), axisLabel: { color: '#8899bb' } },
+                yAxis: { type: 'value', axisLabel: { color: '#8899bb' } },
+                series: [{ type: 'bar', data: data.seasonal.map(d => d.count), itemStyle: { color: '#7b68ee' } }]
+            });
+
+            renderChart('scatterChart', {
+                tooltip: { trigger: 'item' },
+                grid: { top: 30, bottom: 30, left: 60, right: 20 },
+                xAxis: { type: 'value', name: '温度(℃)', axisLabel: { color: '#8899bb' } },
+                yAxis: { type: 'value', name: '租车量', axisLabel: { color: '#8899bb' } },
+                series: [{
+                    type: 'scatter',
+                    data: data.scatter.map(d => [d.temp, d.count]),
+                    symbolSize: 10,
+                    itemStyle: { color: '#ff6b6b' }
+                }]
+            });
+
+            renderChart('pieChart', {
+                tooltip: { trigger: 'item' },
+                series: [{
+                    type: 'pie',
+                    radius: ['40%', '70%'],
+                    data: [
+                        { value: data.registered_ratio, name: '注册用户', itemStyle: { color: '#00d4ff' } },
+                        { value: (100 - data.registered_ratio), name: '临时用户', itemStyle: { color: '#ff6b6b' } }
+                    ],
+                    label: { color: '#8899bb' }
+                }]
+            });
+        }
+
+        function renderChart(domId, option) {
+            const el = document.getElementById(domId);
+            if (!el) return;
+            const chart = echarts.init(el);
+            chart.setOption(option);
+            window.addEventListener('resize', function() { chart.resize(); });
+        }
+    </script>
+
+</body>
+</html>

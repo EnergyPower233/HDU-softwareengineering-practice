@@ -1,6 +1,6 @@
 # 城市共享单车出行数据分析与可视化
 
-《软件开发实践1》“数据分析与可视化”方向 Skeleton。项目以 Python、NumPy、pandas、matplotlib 为基础，演示从共享单车数据读取、清洗、统计分析到图表输出的完整流程。
+《软件开发实践1》“数据分析与可视化”方向课程项目。项目包含 Python 数据清洗与统计分析、SQLite 建库与查询接口、ECharts 数据大屏和完整项目文档。
 
 ## 快速开始
 
@@ -14,15 +14,19 @@ pytest
 
 运行后会在 `reports/figures/` 生成小时租车量、用户类型和天气影响图。
 
+数据库和前端大屏运行方式见 [`docs/operation-manual.md`](docs/operation-manual.md)。
+
 ## 项目结构
 
 ```text
 .
 ├── data/raw/                    # UCI 真实数据
+├── data/database/               # SQLite 数据库文件
 ├── data/processed/              # 清洗后的中间数据
 ├── docs/                        # 需求、方案、调研与实验报告
 ├── notebooks/                   # 探索性分析 Notebook
 ├── reports/figures/             # 运行生成的图表
+├── web/dashboard/               # ECharts 共享单车数据大屏
 ├── src/bikeshare_viz/
 │   ├── config.py                # 路径与默认参数
 │   ├── main.py                  # CLI 入口
@@ -30,10 +34,11 @@ pytest
 │   ├── data/cleaner.py          # 数据清洗
 │   ├── analysis/metrics.py      # 指标与统计分析
 │   └── visualization/charts.py  # 图表生成
+│   └── database/                # 建库、查询接口与本地 JSON API
 └── tests/                       # 单元测试
 ```
 
-完整结构图见 [`docs/code-structure.svg`](docs/code-structure.svg)、[`docs/code-structure.mmd`](docs/code-structure.mmd) 和 [`docs/code-structure.md`](docs/code-structure.md)。组员共同阅读手册见 [`docs/team-reading-guide.md`](docs/team-reading-guide.md)。完整实验报告见 [`docs/final-report.md`](docs/final-report.md)。
+完整结构图见 [`docs/code-structure.svg`](docs/code-structure.svg)、[`docs/code-structure.mmd`](docs/code-structure.mmd) 和 [`docs/code-structure.md`](docs/code-structure.md)。组员共同阅读手册见 [`docs/team-reading-guide.md`](docs/team-reading-guide.md)。完整实验报告见 [`docs/final-report.md`](docs/final-report.md)。前端入口为 [`web/dashboard/index.html`](web/dashboard/index.html)。
 
 ## 与大纲要求的对应
 

@@ -58,6 +58,10 @@
 | registered | 注册用户租车量 | 整数 | 用户结构 |
 | cnt | 总租车量 | 整数 | 核心目标指标 |
 
+### 2.1 Kaggle 数据获取与项目数据集
+
+除 UCI 原始数据外，项目同时整理了 Kaggle 共享单车需求数据形成 `data/raw/kaggle-bike-demand/bike_data.csv`。该文件包含 `datetime`、季节、天气、温湿度、临时用户、注册用户和总租车量字段，供 SQLite 数据库、查询接口与前端数据大屏使用。数据集获取页面截图见 `docs/project-evidence.md` 的图 1。
+
 ## 3 技术路线与方案选择
 
 数据处理采用 pandas，图表采用 matplotlib，测试采用 pytest。处理流程为：
@@ -86,6 +90,12 @@ hour.csv → 字段校验 → 类型转换 → 缺失/异常处理 → 指标聚
 3. 转换日期与数值类型，并删除关键字段为空的记录。
 4. 计算小时、用户类型和天气分组指标。
 5. 输出三张图表到 `reports/figures/`。
+
+### 4.3 数据库、查询接口与前端大屏
+
+项目新增 SQLite 数据层，将 Kaggle 整理后的 CSV 导入 `bike_usage` 表。`init_db.py` 负责建库、导入与索引创建；`db_helper.py` 提供 KPI、天气统计、小时统计查询；`api.py` 提供 `/api/kpi`、`/api/weather`、`/api/hourly` 三个本地 JSON 接口。前端使用 `web/dashboard/index.html`、ECharts 和 `data.json` 展示核心指标与月度趋势、小时、季节、温度、用户结构图表。
+
+建库导入和查询接口测试截图分别见 `docs/project-evidence.md` 的图 2、图 3。
 
 ## 5 数据处理实现
 
