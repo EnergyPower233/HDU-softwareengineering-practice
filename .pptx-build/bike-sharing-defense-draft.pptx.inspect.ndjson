@@ -1,0 +1,186 @@
+{"kind":"deck","id":"pr/z1btbq","name":"Deck"}
+{"kind":"layout","layoutId":"5372dbe1-1fc2-4f60-ae25-d08b9c52a68b","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"d2585019-13f1-4c0d-bcb5-acbdf904303b","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/a13kui","slide":1,"title":"共享单车租赁需求分析","textShapes":5}
+{"kind":"shape","id":"sh/8je5sfi5","slide":1,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/ni5oja1k","slide":1,"bbox":[820,0,460,720]}
+{"kind":"shape","id":"sh/mhwnq50z","slide":1,"bbox":[850,95,290,290]}
+{"kind":"shape","id":"sh/xo76pkjm","slide":1,"bbox":[920,165,150,150]}
+{"kind":"textbox","id":"sh/wny5wfi1","slide":1,"text":"共享单车租赁需求分析","textPreview":"共享单车租赁需求分析","textChars":10,"textLines":1,"bbox":[74,174,690,72]}
+{"kind":"textbox","id":"sh/vmpona1g","slide":1,"text":"数据库查询与可视化大屏系统","textPreview":"数据库查询与可视化大屏系统","textChars":13,"textLines":1,"bbox":[76,256,680,42]}
+{"kind":"shape","id":"sh/algnu50b","slide":1,"bbox":[76,334,210,4]}
+{"kind":"textbox","id":"sh/5cr6tkzy","slide":1,"text":"软件开发实践 1 · 数据分析与可视化方向","textPreview":"软件开发实践 1 · 数据分析与可视化方向","textChars":21,"textLines":1,"bbox":[76,370,650,28]}
+{"kind":"textbox","id":"sh/kby50zid","slide":1,"text":"五人课程项目答辩","textPreview":"五人课程项目答辩","textChars":8,"textLines":1,"bbox":[76,455,360,25]}
+{"kind":"textbox","id":"sh/ut8r2p0f","slide":1,"text":"数据来源：UCI Bike Sharing Dataset / Kaggle Bike Sharing Demand","textPreview":"数据来源：UCI Bike Sharing Dataset / Kaggle Bike Sharing Demand","textChars":58,"textLines":1,"bbox":[76,505,650,20]}
+{"kind":"notes","id":"nt/a13kui","slide":1,"text":"封面。演讲者：成员 1。数据来源见项目数据说明与报告。"}
+{"kind":"slide","id":"sl/4v30j8","slide":2,"title":"项目问题与交付范围","textShapes":13}
+{"kind":"textbox","id":"sh/3658ze5o","slide":2,"text":"项目问题与交付范围","textPreview":"项目问题与交付范围","textChars":9,"textLines":1,"bbox":[64,42,900,48]}
+{"kind":"textbox","id":"sh/o7e98zm9","slide":2,"text":"从共享单车需求数据到数据库查询与前端展示","textPreview":"从共享单车需求数据到数据库查询与前端展示","textChars":20,"textLines":1,"bbox":[66,94,920,30]}
+{"kind":"shape","id":"sh/p87q14nu","slide":2,"bbox":[64,128,1152,3]}
+{"kind":"textbox","id":"sh/q9gra94f","slide":2,"text":"我们希望回答的运营问题","textPreview":"我们希望回答的运营问题","textChars":11,"textLines":1,"bbox":[72,174,500,32]}
+{"kind":"shape","id":"sh/bap83e50","slide":2,"bbox":[80,236,7,7]}
+{"kind":"textbox","id":"sh/cby9cjml","slide":2,"text":"一天中哪些时段租车需求最高","textPreview":"一天中哪些时段租车需求最高","textChars":13,"textLines":1,"bbox":[100,226,500,34]}
+{"kind":"shape","id":"sh/dc7q5on6","slide":2,"bbox":[80,294,7,7]}
+{"kind":"textbox","id":"sh/ydgret4b","slide":2,"text":"天气变化会带来怎样的租车量差异","textPreview":"天气变化会带来怎样的租车量差异","textChars":15,"textLines":1,"bbox":[100,284,500,34]}
+{"kind":"shape","id":"sh/zep87y5w","slide":2,"bbox":[80,352,7,7]}
+{"kind":"textbox","id":"sh/batoz2xc","slide":2,"text":"注册用户和临时用户的使用结构如何","textPreview":"注册用户和临时用户的使用结构如何","textChars":16,"textLines":1,"bbox":[100,342,500,34]}
+{"kind":"shape","id":"sh/a9knqxwr","slide":2,"bbox":[670,160,500,420]}
+{"kind":"textbox","id":"sh/xcb61cvi","slide":2,"text":"项目交付","textPreview":"项目交付","textChars":4,"textLines":1,"bbox":[710,195,230,28]}
+{"kind":"shape","id":"sh/cb25s7ex","slide":2,"bbox":[720,262,7,7]}
+{"kind":"textbox","id":"sh/n69ovix0","slide":2,"text":"Python 数据清洗与统计分析","textPreview":"Python 数据清洗与统计分析","textChars":16,"textLines":1,"bbox":[740,252,380,34]}
+{"kind":"shape","id":"sh/250nmdwv","slide":2,"bbox":[720,320,7,7]}
+{"kind":"textbox","id":"sh/p8b6xsf6","slide":2,"text":"SQLite 建库、导入与查询接口","textPreview":"SQLite 建库、导入与查询接口","textChars":17,"textLines":1,"bbox":[740,310,380,34]}
+{"kind":"shape","id":"sh/o725onel","slide":2,"bbox":[720,378,7,7]}
+{"kind":"textbox","id":"sh/72do7mdk","slide":2,"text":"ECharts 数据大屏与完整文档","textPreview":"ECharts 数据大屏与完整文档","textChars":17,"textLines":1,"bbox":[740,368,380,34]}
+{"kind":"textbox","id":"sh/m147yhwz","slide":2,"text":"核心思路：分析、数据库和页面分层实现，便于测试与展示","textPreview":"核心思路：分析、数据库和页面分层实现，便于测试与展示","textChars":26,"textLines":1,"bbox":[72,570,1080,36]}
+{"kind":"textbox","id":"sh/ix8rqlg7","slide":2,"text":"共享单车租赁需求分析、数据库查询与可视化大屏","textPreview":"共享单车租赁需求分析、数据库查询与可视化大屏","textChars":22,"textLines":1,"bbox":[64,682,900,18]}
+{"kind":"textbox","id":"sh/jyh8zqxs","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1160,680,56,18]}
+{"kind":"notes","id":"nt/4v30j8","slide":2,"text":"演讲者：成员 1。说明项目不是单纯画图，而是包含数据、数据库与前端三层。"}
+{"kind":"slide","id":"sl/x8mhfl","slide":3,"title":"真实数据来源","textShapes":9}
+{"kind":"textbox","id":"sh/je1srud8","slide":3,"text":"真实数据来源","textPreview":"真实数据来源","textChars":6,"textLines":1,"bbox":[64,42,900,48]}
+{"kind":"textbox","id":"sh/kfat0zet","slide":3,"text":"UCI 用于小时级分析，Kaggle 整理数据用于数据库与大屏","textPreview":"UCI 用于小时级分析，Kaggle 整理数据用于数据库与大屏","textChars":31,"textLines":1,"bbox":[66,94,920,30]}
+{"kind":"shape","id":"sh/lg3at4vy","slide":3,"bbox":[64,128,1152,3]}
+{"kind":"textbox","id":"sh/7ilsved4","slide":3,"text":"数据使用方式","textPreview":"数据使用方式","textChars":6,"textLines":1,"bbox":[74,175,330,32]}
+{"kind":"shape","id":"sh/8jut4jep","slide":3,"bbox":[80,240,7,7]}
+{"kind":"textbox","id":"sh/tk3ax4va","slide":3,"text":"UCI hour.csv：17,379 条小时记录，用于清洗、统计和静态图表","textPreview":"UCI hour.csv：17,379 条小时记录，用于清洗、统计和静态图表","textChars":38,"textLines":1,"bbox":[100,230,490,34]}
+{"kind":"shape","id":"sh/ulcb69cv","slide":3,"bbox":[80,308,7,7]}
+{"kind":"textbox","id":"sh/vmlszedg","slide":3,"text":"Kaggle bike_data.csv：10,886 条记录，用于 SQLite、查询接口和前端 JSON","textPreview":"Kaggle bike_data.csv：10,886 条记录，用于 SQLite、查询接口和前端 JSON","textChars":54,"textLines":1,"bbox":[100,298,490,34]}
+{"kind":"shape","id":"sh/7al03qdo","slide":3,"bbox":[80,376,7,7]}
+{"kind":"textbox","id":"sh/m9czalc3","slide":3,"text":"两份数据均包含时间、天气、用户数量和总租车量等核心字段","textPreview":"两份数据均包含时间、天气、用户数量和总租车量等核心字段","textChars":27,"textLines":1,"bbox":[100,366,490,34]}
+{"kind":"textbox","id":"sh/9c3i50ve","slide":3,"text":"Kaggle 页面截图保留为数据获取过程证据","textPreview":"Kaggle 页面截图保留为数据获取过程证据","textChars":22,"textLines":1,"bbox":[74,572,500,25]}
+{"kind":"textbox","id":"sh/8buhcvu9","slide":3,"text":"共享单车租赁需求分析、数据库查询与可视化大屏","textPreview":"共享单车租赁需求分析、数据库查询与可视化大屏","textChars":22,"textLines":1,"bbox":[64,682,900,18]}
+{"kind":"textbox","id":"sh/zm10zqdc","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1160,680,56,18]}
+{"kind":"image","id":"im/fil4fu9w","slide":3,"name":"","geometry":"roundRect","alt":"Kaggle 共享单车需求数据集页面","bbox":[650,158,530,420]}
+{"kind":"notes","id":"nt/x8mhfl","slide":3,"text":"演讲者：成员 1。右侧图片为项目实际数据获取截图。"}
+{"kind":"slide","id":"sl/bl8i5a","slide":4,"title":"系统架构","textShapes":11}
+{"kind":"textbox","id":"sh/3e9sfepg","slide":4,"text":"系统架构","textPreview":"系统架构","textChars":4,"textLines":1,"bbox":[64,42,900,48]}
+{"kind":"textbox","id":"sh/ofitojq1","slide":4,"text":"三条数据链路共同组成完整项目","textPreview":"三条数据链路共同组成完整项目","textChars":14,"textLines":1,"bbox":[66,94,920,30]}
+{"kind":"shape","id":"sh/pgraho7m","slide":4,"bbox":[64,128,1152,3]}
+{"kind":"shape","id":"sh/qh0bqt87","slide":4,"bbox":[84,190,300,310]}
+{"kind":"textbox","id":"sh/bi9sjyps","slide":4,"text":"静态分析","textPreview":"静态分析","textChars":4,"textLines":1,"bbox":[112,223,250,33]}
+{"kind":"textbox","id":"sh/cjitsjqd","slide":4,"text":"UCI hour.csv\nloader → cleaner → metrics → charts\n输出 PNG 分析图表","textPreview":"UCI hour.csv | loader → cleaner → metrics → charts | 输出 PNG 分析图表","textChars":60,"textLines":3,"bbox":[112,282,244,130]}
+{"kind":"shape","id":"sh/dkralo7y","slide":4,"bbox":[450,190,300,310]}
+{"kind":"textbox","id":"sh/6lwrep83","slide":4,"text":"数据库查询","textPreview":"数据库查询","textChars":5,"textLines":1,"bbox":[478,223,250,33]}
+{"kind":"textbox","id":"sh/rmps7upo","slide":4,"text":"Kaggle CSV\ninit_db → SQLite → db_helper → API\n返回 KPI、天气、小时查询结果","textPreview":"Kaggle CSV | init_db → SQLite → db_helper → API | 返回 KPI、天气、小时查询结果","textChars":62,"textLines":3,"bbox":[478,282,244,130]}
+{"kind":"shape","id":"sh/fm14zyps","slide":4,"bbox":[816,190,300,310]}
+{"kind":"textbox","id":"sh/els36t87","slide":4,"text":"前端大屏","textPreview":"前端大屏","textChars":4,"textLines":1,"bbox":[844,223,250,33]}
+{"kind":"textbox","id":"sh/1ojm187y","slide":4,"text":"Kaggle CSV\nprocess_data → data.json → ECharts\n输出浏览器端仪表盘","textPreview":"Kaggle CSV | process_data → data.json → ECharts | 输出浏览器端仪表盘","textChars":55,"textLines":3,"bbox":[844,282,244,130]}
+{"kind":"textbox","id":"sh/gnal83qd","slide":4,"text":"测试覆盖 UCI 分析流程和 SQLite 导入查询流程","textPreview":"测试覆盖 UCI 分析流程和 SQLite 导入查询流程","textChars":28,"textLines":1,"bbox":[84,555,1010,30]}
+{"kind":"textbox","id":"sh/ri1kvepw","slide":4,"text":"共享单车租赁需求分析、数据库查询与可视化大屏","textPreview":"共享单车租赁需求分析、数据库查询与可视化大屏","textChars":22,"textLines":1,"bbox":[64,682,900,18]}
+{"kind":"textbox","id":"sh/6h83298b","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1160,680,56,18]}
+{"kind":"notes","id":"nt/bl8i5a","slide":4,"text":"演讲者：成员 1。完整结构图见项目 docs/code-structure.svg。"}
+{"kind":"slide","id":"sl/v5zzqi","slide":5,"title":"小时需求与天气差异","textShapes":6}
+{"kind":"textbox","id":"sh/rmxofmxo","slide":5,"text":"小时需求与天气差异","textPreview":"小时需求与天气差异","textChars":9,"textLines":1,"bbox":[64,42,900,48]}
+{"kind":"textbox","id":"sh/cn6po7e9","slide":5,"text":"统计结果来自 UCI 小时级数据","textPreview":"统计结果来自 UCI 小时级数据","textChars":16,"textLines":1,"bbox":[66,94,920,30]}
+{"kind":"shape","id":"sh/doz6hcfu","slide":5,"bbox":[64,128,1152,3]}
+{"kind":"textbox","id":"sh/0rqpsrel","slide":5,"text":"17 点平均租车量最高，约 461 次","textPreview":"17 点平均租车量最高，约 461 次","textChars":19,"textLines":1,"bbox":[86,585,500,30]}
+{"kind":"textbox","id":"sh/1sz6lwfq","slide":5,"text":"天气越恶劣，平均租车量越低。该结果属于描述性统计","textPreview":"天气越恶劣，平均租车量越低。该结果属于描述性统计","textChars":24,"textLines":1,"bbox":[734,585,440,40]}
+{"kind":"textbox","id":"sh/mt87u1wb","slide":5,"text":"共享单车租赁需求分析、数据库查询与可视化大屏","textPreview":"共享单车租赁需求分析、数据库查询与可视化大屏","textChars":22,"textLines":1,"bbox":[64,682,900,18]}
+{"kind":"textbox","id":"sh/nuhon6xw","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1160,680,56,18]}
+{"kind":"chart","id":"ch/qd0bel4v","slide":5,"name":"","chartType":"line","bbox":[68,170,620,390]}
+{"kind":"chart","id":"ch/rets765g","slide":5,"name":"","chartType":"bar","bbox":[734,192,430,350]}
+{"kind":"notes","id":"nt/v5zzqi","slide":5,"text":"演讲者：成员 2。数据结论：17 点最高；天气统计仅说明关联趋势，不宣称因果。"}
+{"kind":"slide","id":"sl/2mmn26","slide":6,"title":"SQLite 建库与数据导入","textShapes":9}
+{"kind":"textbox","id":"sh/03qx07y1","slide":6,"text":"SQLite 建库与数据导入","textPreview":"SQLite 建库与数据导入","textChars":14,"textLines":1,"bbox":[64,42,900,48]}
+{"kind":"textbox","id":"sh/f2hg72xg","slide":6,"text":"Kaggle 整理后的 CSV 写入 bike_usage 表","textPreview":"Kaggle 整理后的 CSV 写入 bike_usage 表","textChars":31,"textLines":1,"bbox":[66,94,920,30]}
+{"kind":"shape","id":"sh/e18fyxgv","slide":6,"bbox":[64,128,1152,3]}
+{"kind":"textbox","id":"sh/orax4rex","slide":6,"text":"实现内容","textPreview":"实现内容","textChars":4,"textLines":1,"bbox":[72,180,300,30]}
+{"kind":"shape","id":"sh/nq1gbmxc","slide":6,"bbox":[78,245,7,7]}
+{"kind":"textbox","id":"sh/2p8f2hgr","slide":6,"text":"读取 bike_data.csv 并检查 12 个业务字段","textPreview":"读取 bike_data.csv 并检查 12 个业务字段","textChars":29,"textLines":1,"bbox":[98,235,430,34]}
+{"kind":"shape","id":"sh/5wfe1sfy","slide":6,"bbox":[78,307,7,7]}
+{"kind":"textbox","id":"sh/4v6xsnyt","slide":6,"text":"创建 bike_usage 表，建立时间和天气索引","textPreview":"创建 bike_usage 表，建立时间和天气索引","textChars":25,"textLines":1,"bbox":[98,297,430,34]}
+{"kind":"shape","id":"sh/eh8ny54f","slide":6,"bbox":[78,369,7,7]}
+{"kind":"textbox","id":"sh/fih47a50","slide":6,"text":"数据库文件随项目提交，便于现场复现","textPreview":"数据库文件随项目提交，便于现场复现","textChars":17,"textLines":1,"bbox":[98,359,430,34]}
+{"kind":"textbox","id":"sh/0jq50fm5","slide":6,"text":"对应代码：database/init_db.py","textPreview":"对应代码：database/init_db.py","textChars":24,"textLines":1,"bbox":[72,538,430,26]}
+{"kind":"textbox","id":"sh/14z69knq","slide":6,"text":"共享单车租赁需求分析、数据库查询与可视化大屏","textPreview":"共享单车租赁需求分析、数据库查询与可视化大屏","textChars":22,"textLines":1,"bbox":[64,682,900,18]}
+{"kind":"textbox","id":"sh/258n2p4b","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1160,680,56,18]}
+{"kind":"image","id":"im/wvut4nit","slide":6,"name":"","geometry":"roundRect","alt":"SQLite 数据库导入成功截图","bbox":[610,150,570,430]}
+{"kind":"notes","id":"nt/2mmn26","slide":6,"text":"演讲者：成员 1。右侧是实际导入成功截图。"}
+{"kind":"slide","id":"sl/naa0bh","slide":7,"title":"查询接口与数据服务","textShapes":9}
+{"kind":"textbox","id":"sh/c3ixk7ud","slide":7,"text":"查询接口与数据服务","textPreview":"查询接口与数据服务","textChars":9,"textLines":1,"bbox":[64,42,900,48]}
+{"kind":"textbox","id":"sh/b29gr2ds","slide":7,"text":"KPI、天气和小时统计封装为可复用接口","textPreview":"KPI、天气和小时统计封装为可复用接口","textChars":19,"textLines":1,"bbox":[66,94,920,30]}
+{"kind":"shape","id":"sh/a10fixcn","slide":7,"bbox":[64,128,1152,3]}
+{"kind":"textbox","id":"sh/ozyxg7uh","slide":7,"text":"三个查询接口","textPreview":"三个查询接口","textChars":6,"textLines":1,"bbox":[72,180,340,32]}
+{"kind":"shape","id":"sh/nypgn2dw","slide":7,"bbox":[78,245,7,7]}
+{"kind":"textbox","id":"sh/2xgfexcb","slide":7,"text":"get_kpi_summary：总租车量、用户数量、平均温度","textPreview":"get_kpi_summary：总租车量、用户数量、平均温度","textChars":30,"textLines":1,"bbox":[98,235,455,34]}
+{"kind":"shape","id":"sh/1w7ylsvq","slide":7,"bbox":[78,307,7,7]}
+{"kind":"textbox","id":"sh/0vyxcnu5","slide":7,"text":"get_weather_stat：按天气编码汇总租车量","textPreview":"get_weather_stat：按天气编码汇总租车量","textChars":27,"textLines":1,"bbox":[98,297,455,34]}
+{"kind":"shape","id":"sh/a5k7upoz","slide":7,"bbox":[78,369,7,7]}
+{"kind":"textbox","id":"sh/v6t83upk","slide":7,"text":"get_hourly_stat：按小时计算平均租车量","textPreview":"get_hourly_stat：按小时计算平均租车量","textChars":26,"textLines":1,"bbox":[98,359,455,34]}
+{"kind":"textbox","id":"sh/w729wz6p","slide":7,"text":"接口测试结果：总租车量 2,085,476 次","textPreview":"接口测试结果：总租车量 2,085,476 次","textChars":23,"textLines":1,"bbox":[72,536,490,28]}
+{"kind":"textbox","id":"sh/h8bq54na","slide":7,"text":"共享单车租赁需求分析、数据库查询与可视化大屏","textPreview":"共享单车租赁需求分析、数据库查询与可视化大屏","textChars":22,"textLines":1,"bbox":[64,682,900,18]}
+{"kind":"textbox","id":"sh/m107qpon","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1160,680,56,18]}
+{"kind":"image","id":"im/072l4fy9","slide":7,"name":"","geometry":"roundRect","alt":"KPI 和天气统计查询接口测试截图","bbox":[635,150,540,420]}
+{"kind":"notes","id":"nt/naa0bh","slide":7,"text":"演讲者：成员 1。右侧是项目实际 KPI 与天气查询测试截图。"}
+{"kind":"slide","id":"sl/c8qj0a","slide":8,"title":"ECharts 数据大屏","textShapes":18}
+{"kind":"textbox","id":"sh/za5cbmlg","slide":8,"text":"ECharts 数据大屏","textPreview":"ECharts 数据大屏","textChars":12,"textLines":1,"bbox":[64,42,900,48]}
+{"kind":"textbox","id":"sh/0byd4rm1","slide":8,"text":"前端读取 data.json 并展示关键指标与趋势","textPreview":"前端读取 data.json 并展示关键指标与趋势","textChars":25,"textLines":1,"bbox":[66,94,920,30]}
+{"kind":"shape","id":"sh/lc7udc3m","slide":8,"bbox":[64,128,1152,3]}
+{"kind":"shape","id":"sh/mdgv6h47","slide":8,"bbox":[70,165,1140,390]}
+{"kind":"textbox","id":"sh/nepcfmls","slide":8,"text":"共享单车租车数据分析大屏","textPreview":"共享单车租车数据分析大屏","textChars":12,"textLines":1,"bbox":[105,194,540,34]}
+{"kind":"shape","id":"sh/8fyd8rmd","slide":8,"bbox":[105,250,220,104]}
+{"kind":"textbox","id":"sh/907uhw3y","slide":8,"text":"2,085,476","textPreview":"2,085,476","textChars":9,"textLines":1,"bbox":[123,270,184,34]}
+{"kind":"textbox","id":"sh/2hcbux43","slide":8,"text":"总租车数","textPreview":"总租车数","textChars":4,"textLines":1,"bbox":[123,315,184,20]}
+{"kind":"shape","id":"sh/3ilc325o","slide":8,"bbox":[365,250,220,104]}
+{"kind":"textbox","id":"sh/r2hs329g","slide":8,"text":"4,573","textPreview":"4,573","textChars":5,"textLines":1,"bbox":[383,270,184,34]}
+{"kind":"textbox","id":"sh/618rux8v","slide":8,"text":"日均租车","textPreview":"日均租车","textChars":4,"textLines":1,"bbox":[383,315,184,20]}
+{"kind":"shape","id":"sh/t4za5srm","slide":8,"bbox":[625,250,220,104]}
+{"kind":"textbox","id":"sh/s3q9w7q1","slide":8,"text":"8,714","textPreview":"8,714","textChars":5,"textLines":1,"bbox":[643,270,184,34]}
+{"kind":"textbox","id":"sh/jexszi9k","slide":8,"text":"最高单日","textPreview":"最高单日","textChars":4,"textLines":1,"bbox":[643,315,184,20]}
+{"kind":"shape","id":"sh/idorqd8z","slide":8,"bbox":[885,250,220,104]}
+{"kind":"textbox","id":"sh/5gza1sra","slide":8,"text":"81.2%","textPreview":"81.2%","textChars":5,"textLines":1,"bbox":[903,270,184,34]}
+{"kind":"textbox","id":"sh/4fq9snq5","slide":8,"text":"注册用户占比","textPreview":"注册用户占比","textChars":6,"textLines":1,"bbox":[903,315,184,20]}
+{"kind":"textbox","id":"sh/vaxsvi98","slide":8,"text":"月度趋势","textPreview":"月度趋势","textChars":4,"textLines":1,"bbox":[110,395,190,25]}
+{"kind":"shape","id":"sh/u9ormd8n","slide":8,"bbox":[110,435,450,70]}
+{"kind":"textbox","id":"sh/y54bedcv","slide":8,"text":"折线图：观察需求在不同月份的变化","textPreview":"折线图：观察需求在不同月份的变化","textChars":16,"textLines":1,"bbox":[132,460,400,20]}
+{"kind":"textbox","id":"sh/z6ds7yt0","slide":8,"text":"小时 / 季节 / 温度 / 用户结构","textPreview":"小时 / 季节 / 温度 / 用户结构","textChars":19,"textLines":1,"bbox":[630,395,370,25]}
+{"kind":"shape","id":"sh/07mtg3ul","slide":8,"bbox":[630,435,470,70]}
+{"kind":"textbox","id":"sh/l8fa98b6","slide":8,"text":"柱状图、散点图、饼图：支持快速阅读","textPreview":"柱状图、散点图、饼图：支持快速阅读","textChars":17,"textLines":1,"bbox":[652,460,420,20]}
+{"kind":"textbox","id":"sh/m9obidcr","slide":8,"text":"数据更新流程：bike_data.csv → process_data.py → data.json → index.html","textPreview":"数据更新流程：bike_data.csv → process_data.py → data.json → index.html","textChars":63,"textLines":1,"bbox":[76,590,1050,30]}
+{"kind":"textbox","id":"sh/7axsbitc","slide":8,"text":"共享单车租赁需求分析、数据库查询与可视化大屏","textPreview":"共享单车租赁需求分析、数据库查询与可视化大屏","textChars":22,"textLines":1,"bbox":[64,682,900,18]}
+{"kind":"textbox","id":"sh/8b6tknax","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1160,680,56,18]}
+{"kind":"notes","id":"nt/c8qj0a","slide":8,"text":"演讲者：成员 3。现场可启动 web/dashboard 的 http.server 后展示真实页面。"}
+{"kind":"slide","id":"sl/r4xuud","slide":9,"title":"五人协作与交付物","textShapes":20}
+{"kind":"textbox","id":"sh/qxgb65wf","slide":9,"text":"五人协作与交付物","textPreview":"五人协作与交付物","textChars":8,"textLines":1,"bbox":[64,42,900,48]}
+{"kind":"textbox","id":"sh/d0ruh0vq","slide":9,"text":"每位成员负责一个岗位，同时理解完整数据链路","textPreview":"每位成员负责一个岗位，同时理解完整数据链路","textChars":21,"textLines":1,"bbox":[66,94,920,30]}
+{"kind":"shape","id":"sh/czyt8vul","slide":9,"bbox":[64,128,1152,3]}
+{"kind":"shape","id":"sh/3upcbqdo","slide":9,"bbox":[70,170,330,140]}
+{"kind":"textbox","id":"sh/2tgb2lw3","slide":9,"text":"成员 1","textPreview":"成员 1","textChars":4,"textLines":1,"bbox":[94,192,100,24]}
+{"kind":"textbox","id":"sh/pw7ud0vu","slide":9,"text":"项目管理、后端与数据库","textPreview":"项目管理、后端与数据库","textChars":11,"textLines":1,"bbox":[94,225,270,26]}
+{"kind":"textbox","id":"sh/ovyt4ve9","slide":9,"text":"建库、接口、整合","textPreview":"建库、接口、整合","textChars":8,"textLines":1,"bbox":[94,265,270,20]}
+{"kind":"shape","id":"sh/nq9cnad8","slide":9,"bbox":[445,170,330,140]}
+{"kind":"textbox","id":"sh/mp0bepcn","slide":9,"text":"成员 2","textPreview":"成员 2","textChars":4,"textLines":1,"bbox":[469,192,100,24]}
+{"kind":"textbox","id":"sh/wv25sv2x","slide":9,"text":"数据分析与算法","textPreview":"数据分析与算法","textChars":7,"textLines":1,"bbox":[469,225,270,26]}
+{"kind":"textbox","id":"sh/hwvm10ji","slide":9,"text":"清洗、指标、结论","textPreview":"清洗、指标、结论","textChars":8,"textLines":1,"bbox":[469,265,270,20]}
+{"kind":"shape","id":"sh/utknqlk7","slide":9,"bbox":[820,170,330,140]}
+{"kind":"textbox","id":"sh/vut4zq1c","slide":9,"text":"成员 3","textPreview":"成员 3","textChars":4,"textLines":1,"bbox":[844,192,100,24]}
+{"kind":"textbox","id":"sh/8r2lob21","slide":9,"text":"前端与可视化大屏","textPreview":"前端与可视化大屏","textChars":8,"textLines":1,"bbox":[844,225,270,26]}
+{"kind":"textbox","id":"sh/9sbmxgjm","slide":9,"text":"ECharts、页面、展示","textPreview":"ECharts、页面、展示","textChars":13,"textLines":1,"bbox":[844,265,270,20]}
+{"kind":"shape","id":"sh/mpk3mlkv","slide":9,"bbox":[70,360,330,140]}
+{"kind":"textbox","id":"sh/7qt4v61g","slide":9,"text":"成员 4","textPreview":"成员 4","textChars":4,"textLines":1,"bbox":[94,382,100,24]}
+{"kind":"textbox","id":"sh/k3ilkb2p","slide":9,"text":"文档与质量控制","textPreview":"文档与质量控制","textChars":7,"textLines":1,"bbox":[94,415,270,26]}
+{"kind":"textbox","id":"sh/lormtgja","slide":9,"text":"报告、证据、测试","textPreview":"报告、证据、测试","textChars":8,"textLines":1,"bbox":[94,455,270,20]}
+{"kind":"shape","id":"sh/1kj2xsve","slide":9,"bbox":[445,360,330,140]}
+{"kind":"textbox","id":"sh/0ja1o7ut","slide":9,"text":"成员 5","textPreview":"成员 5","textChars":4,"textLines":1,"bbox":[469,382,100,24]}
+{"kind":"textbox","id":"sh/zi1kv2d8","slide":9,"text":"技术调研与答辩","textPreview":"技术调研与答辩","textChars":7,"textLines":1,"bbox":[469,415,270,26]}
+{"kind":"textbox","id":"sh/exsjmxcn","slide":9,"text":"调研、PPT、演练","textPreview":"调研、PPT、演练","textChars":9,"textLines":1,"bbox":[469,455,270,20]}
+{"kind":"textbox","id":"sh/dwj2tsv2","slide":9,"text":"答辩前全员完成一次“建库 → 查询 → 生成 JSON → 启动大屏 → 运行测试”的交叉演练","textPreview":"答辩前全员完成一次“建库 → 查询 → 生成 JSON → 启动大屏 → 运行测试”的交叉演练","textChars":47,"textLines":1,"bbox":[72,575,1100,30]}
+{"kind":"textbox","id":"sh/cva1knuh","slide":9,"text":"共享单车租赁需求分析、数据库查询与可视化大屏","textPreview":"共享单车租赁需求分析、数据库查询与可视化大屏","textChars":22,"textLines":1,"bbox":[64,682,900,18]}
+{"kind":"textbox","id":"sh/ru1kridw","slide":9,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1160,680,56,18]}
+{"kind":"notes","id":"nt/r4xuud","slide":9,"text":"演讲者：成员 4 或成员 5。正式分工见 docs/team-plan.md。"}
+{"kind":"slide","id":"sl/egt1ef","slide":10,"title":"项目总结","textShapes":8}
+{"kind":"textbox","id":"sh/ahw725gr","slide":10,"text":"项目总结","textPreview":"项目总结","textChars":4,"textLines":1,"bbox":[76,76,400,52]}
+{"kind":"shape","id":"sh/x47qxkf2","slide":10,"bbox":[76,145,155,4]}
+{"kind":"shape","id":"sh/cjyp4fyh","slide":10,"bbox":[86,230,7,7]}
+{"kind":"textbox","id":"sh/z6p8zux8","slide":10,"text":"完成真实数据的清洗、统计分析与静态图表","textPreview":"完成真实数据的清洗、统计分析与静态图表","textChars":19,"textLines":1,"bbox":[106,220,750,34]}
+{"kind":"shape","id":"sh/y5gr6pgn","slide":10,"bbox":[86,296,7,7]}
+{"kind":"textbox","id":"sh/l87q1kfe","slide":10,"text":"完成 SQLite 数据导入、KPI 与天气查询接口","textPreview":"完成 SQLite 数据导入、KPI 与天气查询接口","textChars":26,"textLines":1,"bbox":[106,286,750,34]}
+{"kind":"shape","id":"sh/k7y98zyt","slide":10,"bbox":[86,362,7,7]}
+{"kind":"textbox","id":"sh/fal8nqx4","slide":10,"text":"完成 ECharts 数据大屏与项目实施证据整理","textPreview":"完成 ECharts 数据大屏与项目实施证据整理","textChars":24,"textLines":1,"bbox":[106,352,750,34]}
+{"kind":"shape","id":"sh/e9c7ulgj","slide":10,"bbox":[86,428,7,7]}
+{"kind":"textbox","id":"sh/gz29kva9","slide":10,"text":"保留需求预测和实时数据接入的扩展空间","textPreview":"保留需求预测和实时数据接入的扩展空间","textChars":18,"textLines":1,"bbox":[106,418,750,34]}
+{"kind":"shape","id":"sh/h0bad0be","slide":10,"bbox":[900,190,220,220]}
+{"kind":"textbox","id":"sh/ux0rils3","slide":10,"text":"感谢聆听","textPreview":"感谢聆听","textChars":4,"textLines":1,"bbox":[930,260,160,34]}
+{"kind":"textbox","id":"sh/fy98bqto","slide":10,"text":"欢迎提问","textPreview":"欢迎提问","textChars":4,"textLines":1,"bbox":[930,310,160,28]}
+{"kind":"textbox","id":"sh/4329ova5","slide":10,"text":"答辩演示：数据库 → 接口 → 大屏 → 测试","textPreview":"答辩演示：数据库 → 接口 → 大屏 → 测试","textChars":23,"textLines":1,"bbox":[76,618,900,26]}
+{"kind":"notes","id":"nt/egt1ef","slide":10,"text":"演讲者：成员 5。总结项目价值和可扩展方向，进入提问环节。"}

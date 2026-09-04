@@ -40,6 +40,8 @@ pytest
 
 完整结构图见 [`docs/code-structure.svg`](docs/code-structure.svg)、[`docs/code-structure.mmd`](docs/code-structure.mmd) 和 [`docs/code-structure.md`](docs/code-structure.md)。组员共同阅读手册见 [`docs/team-reading-guide.md`](docs/team-reading-guide.md)。完整实验报告见 [`docs/final-report.md`](docs/final-report.md)。前端入口为 [`web/dashboard/index.html`](web/dashboard/index.html)。
 
+答辩演示讲稿见 [`docs/presentation-script.md`](docs/presentation-script.md)。
+
 ## 与大纲要求的对应
 
 - 目标 1：`docs/requirements.md`、`analysis/metrics.py` 体现需求分析与模块设计。
